@@ -1,7 +1,8 @@
 import numpy as np
-class Node : 
-    """ on créé la classe Node, qu'on utilisera ensuite recursivement pour créer la classe BinaryTree"""
-    def __init__(self, label = None, right_nb = None, left_nb = None, cardi = 0) :
+class Node: 
+    """ On créé la classe Node, qu'on utilisera ensuite 
+    recursivement pour créer la classe BinaryTree."""
+    def __init__(self, label = None, right_nb = None, left_nb = None, cardi = 0):
         self.right_nb = right_nb
         self.left_nb  = left_nb
         self.label = label
@@ -10,6 +11,8 @@ class Node :
         return self.label == node2.label
     def __repr__(self):
         return f"{self.label}, {self.cardi}"
+
+
 class BinaryTree:
     """Cette classe BinaryTree permettra de créer l'arbre qui codera le message
      uniquement en mettant en entrée le noeud racine et les noeuds de bout, et de pouvoir
@@ -39,7 +42,7 @@ class BinaryTree:
         return node.label
 
 
-class TreeBuilder : 
+class TreeBuilder: 
     def __init__(self, text):
         self.text = text
     def tree(self):
